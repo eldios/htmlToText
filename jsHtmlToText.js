@@ -1,13 +1,16 @@
-summarytext = summarytext.replace(/(?:\n|\r\n|\r)/ig,"") ;	
-summarytext = summarytext.replace(/<\s*br[^>]*>/ig,"\n") ;
-summarytext = summarytext.replace(/<\s*\/li[^>]*>/ig,"\n") ;
-summarytext = summarytext.replace(/<\s*p[^>]*>/ig,"\n\n") ;
-summarytext = summarytext.replace(/<\s*script[^>]*>[\s\S]*?<\/script>/mig,"") ;
-summarytext = summarytext.replace(/<\s*style[^>]*>[\s\S]*?<\/style>/mig,"") ;
-summarytext = summarytext.replace(/(<([^>]+)>)/ig,"") ;
-summarytext = summarytext.replace(/\n{2,}/g,"\n\n") ;	
-summarytext = summarytext.replace(/\t/g,"") ;
-summarytext = summarytext.replace(/^\n+/m,"") ;	
-summarytext = summarytext.replace(/ {2,}/g," ") ;
-summarytext = summarytext.replace(/\&gt\;/g, ">").replace(/\&lt\;/g, "<");
-
+function htmlToText(html) {
+	return html
+		.replace(/(?:\n|\r\n|\r)/ig,"") 
+		.replace(/<\s*br[^>]*>/ig,"\n") 
+ 		.replace(/<\s*\/li[^>]*>/ig,"\n") 
+ 		.replace(/<\s*p[^>]*>/ig,"\n\n") 
+ 		.replace(/<\s*script[^>]*>[\s\S]*?<\/script>/mig,"")
+ 		.replace(/<\s*style[^>]*>[\s\S]*?<\/style>/mig,"") 
+ 		.replace(/(<([^>]+)>)/ig,"") 
+ 		.replace(/\n{2,}/g,"\n\n") 	
+ 		.replace(/\t/g,"") 
+ 		.replace(/^\n+/m,"") 	
+ 		.replace(/ {2,}/g," ")
+ 		.replace(/\&gt\;/g, ">")
+		.replace(/\&lt\;/g, "<");
+}
