@@ -29,6 +29,8 @@ function htmlToText(html) {
  		.replace(/<\s*script[^>]*>[\s\S]*?<\/script>/mig,"")
 		// Remove content in style tags.
  		.replace(/<\s*style[^>]*>[\s\S]*?<\/style>/mig,"")
+		// Remove content in comments.
+ 		.replace(/<!--.*?-->/mig,"")
 		// Remove all remaining tags. 
  		.replace(/(<([^>]+)>)/ig,"") 
 		// Make sure there are never more than two 
