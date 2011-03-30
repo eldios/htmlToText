@@ -1,4 +1,8 @@
-This is a very preliminary and rudimentary work in progress HTML to Text converter for JavaScript.
+jsHtmlToText is a *very* basic regex-based HTML stripper. 
 
-This project is setup mostly because there is no open source library yet that does this and I thought I'd set up a place for it to develop. 
+It was created for a custom WebTV widget framework, which did not support other existing implementations.
 
+Use it when:
+* you need a minimal implementation
+* don't have access to a proper JavaScript implementation (it was originally written for Konqueror )
+* there no strong security requirements
